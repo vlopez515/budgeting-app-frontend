@@ -12,9 +12,6 @@ import Show from "./Pages/Show";
 // COMPONENTS
 import NavBar from "./Components/NavBar";
 
-
-
-
 function App() {
   return (
     <div className="App" style={{ backgroundImage: "url(/Img.png)" , backgroundSize: "cover" }}>

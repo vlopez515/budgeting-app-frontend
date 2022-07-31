@@ -10,7 +10,6 @@ export default function NavBar() {
           <Link to="/transactions" style={{ textDecoration: "none", color: "red" }}>
             <h1>BUDGET BUDDY</h1>
           </Link>
-
           <Link to="/transactions/new" >
             <button style={{background: 'none', border:'none'}}>NEW TRANSACTION</button>
           </Link>
