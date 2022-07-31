@@ -20,8 +20,6 @@ function TransactionEditForm() {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
-
-
   useEffect(() => {
     axios
       .get(`${API}/transactions/${id}`)
@@ -55,7 +53,7 @@ function TransactionEditForm() {
           onChange={handleTextChange}
           placeholder="Captain Name"
         />
-        <label htmlFor="amount">amount:</label>
+        <label htmlFor="amount">Amount</label>
         <input
           min="0" 
           oninput="validity.valid||(value='');"
@@ -65,14 +63,15 @@ function TransactionEditForm() {
           placeholder="amount"
           onChange={handleTextChange}
         />
-        <label htmlFor="date">date:</label>
+        <label htmlFor="date">Date</label>
         <input
-          id="date"
-          type="text"
-          name="date"
-          value={transaction.date}
-          onChange={handleTextChange}
-        />
+           id="date"
+           type="date"
+            name="date"
+            onChange={handleTextChange}
+            value={transaction.date}
+            required
+          />
         <label htmlFor="from">From:</label>
         <input
           id="from"

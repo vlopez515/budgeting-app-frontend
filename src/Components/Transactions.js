@@ -20,10 +20,11 @@ function Transactions() {
       });
   }, []);
 
+
   return (
     <div className="Transactions">
       <section>
-        <h5>
+        <h6>
           Bank Account Total: $ {""}
           {transactions.reduce(
             (total, transaction) =>
@@ -32,8 +33,8 @@ function Transactions() {
                 : total - Number(transaction.amount),
             0
           )}
-        </h5>
-        <Table striped bordered hover variant="dark">
+        </h6>
+         <Table striped bordered hover variant="dark">
           <tbody>
             {transactions.map((transaction, id) => {
               return <Transaction key={id} transaction={transaction} id={id} />;

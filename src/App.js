@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css"
 
 // PAGES
 import Edit from "./Pages/Edit";
@@ -12,10 +13,12 @@ import Show from "./Pages/Show";
 import NavBar from "./Components/NavBar";
 
 
+
+
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <div className="App" style={{ backgroundImage: "url(/Img.png)" , backgroundSize: "cover" }}>
+    <Router>
         <NavBar />
         <main>
           <Routes>

@@ -1,12 +1,15 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Button from "react-bootstrap/Button";
+import  Button  from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 const API = process.env.REACT_APP_API_URL;
 
 function TransactionNewForm() {
+  
   const [transaction, setTransaction] = useState({
     item_name: "",
     amount: 0,
@@ -28,9 +31,6 @@ function TransactionNewForm() {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
-  // const handleCheckboxChange = () => {
-  //   setTransaction({ ...transaction, from: !transaction.from });
-  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -50,22 +50,21 @@ function TransactionNewForm() {
         />
         <label htmlFor="amount">Amount $</label>
         <input
-          min="0"
+          min="0" 
           oninput="validity.valid||(value='');"
           id="amount"
-          type="number"
-          placeholder= "$"
+          type= "number"
           value={transaction.amount}
           onChange={handleTextChange}
           required
         />
         <label htmlFor="date">Date</label>
         <input
-          id="date"
-          type="text"
+         id="date"
+         type="date"
           name="date"
-          value={transaction.date}
           onChange={handleTextChange}
+          value={transaction.date}
           required
         />
         <label htmlFor="from">From</label>
@@ -73,7 +72,7 @@ function TransactionNewForm() {
           id="from"
           type="text"
           name="from"
-          value={transaction.date}
+          value={transaction.from}
           onChange={handleTextChange}
           required
         />
@@ -87,14 +86,7 @@ function TransactionNewForm() {
           required
         />
         <br />
-        <Button
-          style={{ backgroundColor: "#8D99AE" }}
-          name="form"
-          type="submit"
-          value="Add Item"
-        >
-          Add Item
-        </Button>
+        <Button style={{ backgroundColor: "#8D99AE" }} name="form" type="submit" value="Add Item">Add Item</Button>
       </form>
     </div>
   );

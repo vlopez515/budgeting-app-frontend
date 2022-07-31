@@ -33,14 +33,7 @@ function TransactionDetails() {
       <h5>{transaction.from}</h5>
       <h5>{transaction.category}</h5>
       <div className="showNavigation">
-        <div>
-          {" "}
-          <Link to={`/transactions`}>
-            <button>Back</button>
-          </Link>
-        </div>
-        <div>
-          {" "}
+      <div>
           <Link to={`/transactions/${id}/edit`}>
             <button>Edit</button>
           </Link>
