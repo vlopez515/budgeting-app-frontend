@@ -88,12 +88,12 @@ function TransactionEditForm() {
         />
         <br />
         <input name="form" type="submit" value="Edit Item" />
-        <a>
+        
           {" "}
           <Link to={`/transactions`}>
             <button>Back</button>
           </Link>
-        </a>
+        
       </form>
     </div>
   );
