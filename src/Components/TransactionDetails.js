@@ -15,7 +15,6 @@ function TransactionDetails() {
     axios
       .get(`${API}/transactions/${id}`)
       .then((response) => setTransaction(response.data))
-      .catch((error) => navigate(`/404`));
   }, [id]);
 
   const handleDelete = () => {
